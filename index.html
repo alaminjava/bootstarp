@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamHome | Premium Real Estate in Bangladesh</title>
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3 text-primary" href="#">DreamHome</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link fw-medium" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="#">Buy</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="#">Rent</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="#">Sell</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="#">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="#">Agents</a></li>
+          <li class="nav-item ms-3">
+            <a href="#" class="btn btn-primary px-4 py-2 fw-bold">List Your Property</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8">
+          <h1 class="mb-4">Discover Your Dream Home in Bangladesh</h1>
+          <p class="lead mb-5 fs-4">Premium properties • Trusted agents • Hassle-free buying &amp; selling experience</p>
+          
+          <!-- Search Form -->
+          <div class="card shadow-lg p-4">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <select class="form-select form-select-lg" id="type">
+                  <option value="">All Types</option>
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="villa">Villa</option>
+                  <option value="plot">Plot/Land</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-select form-select-lg" id="location">
+                  <option value="">Any Location</option>
+                  <option value="dhaka">Dhaka</option>
+                  <option value="gulshan">Gulshan</option>
+                  <option value="banani">Banani</option>
+                  <option value="chittagong">Chittagong</option>
+                  <option value="coxsbazar">Cox's Bazar</option>
+                  <option value="sylhet">Sylhet</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-select form-select-lg" id="price">
+                  <option value="">Price Range</option>
+                  <option value="low">Up to ৳50 Lakh</option>
+                  <option value="mid">৳50 Lakh - ৳2 Crore</option>
+                  <option value="high">Above ৳2 Crore</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-primary btn-lg w-100" onclick="searchProperties()">
+                  <i class="fas fa-search"></i> Search Properties
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Featured Properties</h2>
+        <p class="text-muted mt-2">Explore our handpicked premium listings</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Property Cards (Repeated for length) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card property-card h-100">
+            <img src="images/img1.jpg" class="card-img-top" alt="Luxury House">
+            <div class="card-body">
+              <span class="badge bg-success mb-2">For Sale</span>
+              <h5>Luxury 6-Bedroom Villa in Gulshan</h5>
+              <p class="text-primary fw-bold fs-3 mb-1">৳ 4.25 Crore</p>
+              <p class="text-muted">Gulshan-2, Dhaka • 6200 sqft</p>
+              <div class="d-flex gap-4 mt-3 text-muted">
+                <span><i class="fas fa-bed"></i> 6</span>
+                <span><i class="fas fa-bath"></i> 7</span>
+                <span><i class="fas fa-car"></i> 3</span>
+              </div>
+            </div>
+            <div class="card-footer bg-white">
+              <button class="btn btn-outline-primary w-100">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card property-card h-100">
+            <img src="images/home2.jpg" class="card-img-top" alt="Apartment">
+            <div class="card-body">
+              <span class="badge bg-info mb-2">For Rent</span>
+              <h5>Premium 3-Bed Apartment with Lake View</h5>
+              <p class="text-primary fw-bold fs-3 mb-1">৳ 95,000 / month</p>
+              <p class="text-muted">Banani, Dhaka • 2100 sqft</p>
+              <div class="d-flex gap-4 mt-3 text-muted">
+                <span><i class="fas fa-bed"></i> 3</span>
+                <span><i class="fas fa-bath"></i> 3</span>
+                <span><i class="fas fa-elevator"></i> Lift</span>
+              </div>
+            </div>
+            <div class="card-footer bg-white">
+              <button class="btn btn-outline-primary w-100">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card property-card h-100">
+            <img src="images/home3.jpg" class="card-img-top" alt="Beach House">
+            <div class="card-body">
+              <span class="badge bg-success mb-2">For Sale</span>
+              <h5>Sea Facing Beach Villa - Cox's Bazar</h5>
+              <p class="text-primary fw-bold fs-3 mb-1">৳ 6.80 Crore</p>
+              <p class="text-muted">Kolatoli, Cox's Bazar • 8500 sqft</p>
+              <div class="d-flex gap-4 mt-3 text-muted">
+                <span><i class="fas fa-bed"></i> 7</span>
+                <span><i class="fas fa-swimmer"></i> Private Pool</span>
+              </div>
+            </div>
+            <div class="card-footer bg-white">
+              <button class="btn btn-outline-primary w-100">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Why Us -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose DreamHome</h2>
+      </div>
+      <div class="row text-center g-5">
+        <div class="col-md-4">
+          <i class="fas fa-check-circle fa-4x text-primary mb-4"></i>
+          <h4>Verified Listings</h4>
+          <p class="text-muted">Every property is physically inspected and verified by our experts.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-users fa-4x text-primary mb-4"></i>
+          <h4>Expert Real Estate Agents</h4>
+          <p class="text-muted">Professional and experienced agents to guide you throughout the process.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-shield-alt fa-4x text-primary mb-4"></i>
+          <h4>Secure & Transparent</h4>
+          <p class="text-muted">Safe transactions with full legal support and documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Short Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="mb-4">About DreamHome</h2>
+          <p class="lead">DreamHome is one of the most trusted real estate platforms in Bangladesh. Since 2018, we have helped thousands of families find their perfect home.</p>
+          <p>We connect buyers, sellers, and renters with the best properties across Dhaka, Chittagong, Sylhet, and Cox’s Bazar. Our mission is to make real estate buying and selling simple, transparent, and enjoyable.</p>
+          <a href="#" class="btn btn-primary mt-3">Learn More About Us</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="images/team.jpg" class="img-fluid rounded shadow" alt="Our Team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with 3 Columns -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Column 1: About -->
+        <div class="col-lg-4">
+          <h3 class="fw-bold text-primary mb-3">DreamHome</h3>
+          <p class="text-white-50">Your trusted partner in finding the perfect property in Bangladesh. We believe everyone deserves a dream home.</p>
+          <p class="small text-white-50 mt-4">
+            &copy; 2026 DreamHome Real Estate Ltd.<br>
+            All Rights Reserved.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-4">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <div class="row">
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Buy Properties</a></li>
+                <li class="mb-2"><a href="#">Rent Properties</a></li>
+                <li class="mb-2"><a href="#">Sell Your Property</a></li>
+                <li class="mb-2"><a href="#">New Projects</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Our Agents</a></li>
+                <li class="mb-2"><a href="#">Blog &amp; Insights</a></li>
+                <li class="mb-2"><a href="#">Contact Us</a></li>
+                <li class="mb-2"><a href="#">Career</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Contact + Social + Address -->
+        <div class="col-lg-4">
+          <h5 class="fw-bold mb-3">Get In Touch</h5>
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <i class="fas fa-map-marker-alt text-primary me-2"></i>
+              House 45, Road 12, Block E<br>
+              Gulshan-1, Dhaka-1212, Bangladesh
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-phone text-primary me-2"></i>
+              +880 1712-345678<br>
+              +880 1911-987654
+            </li>
+            <li class="mb-4">
+              <i class="fas fa-envelope text-primary me-2"></i>
+              info@dreamhome.com.bd
+            </li>
+          </ul>
+
+          <!-- Social Media -->
+          <h6 class="fw-bold mb-2">Follow Us</h6>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-fs-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white fs-3"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white fs-3"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4 border-secondary">
+      <div class="text-center text-white-50 small">
+        Made with ❤️ for the people of Bangladesh
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function searchProperties() {
+      const type = document.getElementById('type').value;
+      const location = document.getElementById('location').value;
+      alert(`🔍 Searching for ${type || 'all types'} properties in ${location || 'all locations'}...\n\nThank you for using DreamHome! (Demo Version)`);
+    }
+  </script>
+</body>
+</html>
