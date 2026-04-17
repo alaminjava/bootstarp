@@ -20,7 +20,7 @@
 
   .hero {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                url('https://github.com/alaminjava/bootstarp/blob/main/images/home2.jpg') center/cover no-repeat fixed;
+                url('https://raw.githubusercontent.com/alaminjava/bootstarp/refs/heads/main/images/home2.jpg') center/cover no-repeat fixed;
     height: 100vh;
     min-height: 700px;
     display: flex;
